@@ -2,8 +2,6 @@ package _Desk.Thy.entity;
 
 import java.util.Set;
 
-import org.hibernate.annotations.ManyToAny;
-
 import com.fasterxml.jackson.annotation.JsonView;
 
 import jakarta.persistence.Column;
@@ -29,7 +27,7 @@ public class Autorizacao {
 
     @ManyToMany(mappedBy = "autorizacoes")
     private Set<Usuario> usuarios;
-    
+
     public Long getId() {
         return id;
     }
