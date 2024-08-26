@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
 import _Desk.Thy.entity.Usuario;
+import _Desk.Thy.entity.View;
 import _Desk.Thy.service.UsuarioService;
 
 @RestController
@@ -21,6 +24,7 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
+    @JsonView({View.UsuarioView.class})
     @GetMapping(value = "/allUsers")
     public List<Usuario> todosUsuarios() {
         return usuarioService.todosUsuarios();
