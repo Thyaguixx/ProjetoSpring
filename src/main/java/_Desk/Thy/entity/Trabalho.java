@@ -38,7 +38,7 @@ public class Trabalho {
     private String grupo;
 
     @Column(name = "tra_nota")
-    private String nota;
+    private Integer nota;
 
     @Column(name = "tra_justificativa")
     private String justificativa;
@@ -83,11 +83,11 @@ public class Trabalho {
         this.grupo = grupo;
     }
 
-    public String getNota() {
+    public Integer getNota() {
         return nota;
     }
 
-    public void setNota(String nota) {
+    public void setNota(Integer nota) {
         this.nota = nota;
     }
 
